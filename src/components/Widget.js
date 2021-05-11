@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loading from './Loading'
 import '../index.css';
 
 class Widget extends Component {
@@ -20,7 +21,7 @@ class Widget extends Component {
                     <h2>
                         {this.props.heading}
                     </h2>
-                    {this.props.loading ? "loading..." : ""}
+                    {this.props.loading ? <Loading/> : ""}
                 </div>
                 <div className="content">
                     {this.props.children}
