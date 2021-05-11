@@ -87,3 +87,28 @@ body {
       transform: rotate(360deg);
   }
 }
+
+/* Progress.js */
+.Progress {
+  height: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.Progress .inner {
+  position: absolute;
+  background-color: white;
+  height: 5px;
+  transition: width 1s;
+}
+
+/* NumberDisplay */
+.NumberDisplay .value {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.NumberDisplay .max {
+  display: block;
+  clear: left;
+}

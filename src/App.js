@@ -8,7 +8,7 @@ function App() {
     <div>
       <h2>Welcome to databoard</h2>
       <Widget/>
-      <NumberWidgetContainer href="http://localhost:3001/tickets/open" heading="Open Ticket Total" />
+      <NumberWidgetContainer href="http://localhost:4000/tickets/open" heading="Open Ticket Total" />
     </div>
   );
 }
