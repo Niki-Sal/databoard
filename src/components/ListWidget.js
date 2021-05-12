@@ -7,7 +7,7 @@ import ListDisplay from '../components/ListDisplay';
 import ListItem from '../components/ListItem';
 
 // Import styling
-import '../index.css';
+import '../styles/ListWidget.css';
 
 class ListWidget extends Component {
     //Sort items in descending order

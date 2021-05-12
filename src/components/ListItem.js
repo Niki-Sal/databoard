@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 // Import components
 import Progress from '../components/Progress';
+import PropTypes from 'prop-types';
 
 // Import styling
-import '../index.css';
+import '../styles/ListItem.css';
 
 class ListItem extends Component {
     render() {

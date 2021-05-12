@@ -7,7 +7,7 @@ import NumberDisplay from '../components/NumberDisplay';
 import Progress from '../components/Progress';
 
 //Import styling
-import '../index.css';
+import '../styles/NumberWidget.css';
 
 class NumberWidget extends Component {
     // Decide whether to show widget

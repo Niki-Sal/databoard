@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Import styling
-import '../index.css';
+import '../styles/ListDisplay.css';
 
 class ListDisplay extends Component {
     render() {

@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import Loading from './Loading'
-import '../index.css';
+import PropTypes from 'prop-types';
+
+// Import components
+import Loading from './Loading';
+
+//Import styling
+import '../styles/Widget.css';
 
 class Widget extends Component {
-    //responsive grid
     constructor(props) {
         super(props);
+
+        // Create inline styles to make grid elements span multiple rows/columns
         this.spanStyles = {};
         if (props.colspan !== 1) {
             this.spanStyles.gridColumn = `span ${props.colspan}`;
@@ -14,6 +20,7 @@ class Widget extends Component {
             this.spanStyles.gridRow = `span ${props.rowspan}`;
         }
     }
+
     render() {
         return (
             <div style={this.spanStyles} className="Widget">
@@ -21,7 +28,8 @@ class Widget extends Component {
                     <h2>
                         {this.props.heading}
                     </h2>
-                    {this.props.loading ? <Loading/> : ""}
+                    {/* Conditionally show the loading spinner */}
+                    {this.props.loading ? <Loading /> : ""}
                 </div>
                 <div className="content">
                     {this.props.children}
@@ -31,5 +39,19 @@ class Widget extends Component {
     }
 }
 
-export default Widget;
+// Provide default settings for when they aren't supplied
+Widget.defaultProps = {
+    heading: "Unnamed Widget",
+    colspan: 1,
+    rowspan: 1
+}
 
+// Enforce the type of props to send to this component
+Widget.propTypes = {
+    heading: PropTypes.string,
+    colspan: PropTypes.number,
+    rowspan: PropTypes.number,
+    children: PropTypes.element.isRequired
+}
+
+export default Widget;
