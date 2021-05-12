@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1 className="web-title">Office DataBoard</h1>
+                <h1 className="web-title">OFFICE DATABOARD</h1>
                 <div className="App">
                     {/* Add Widgets to display */}
                     <ListWidgetContainer href="http://localhost:4000/stats/top" heading="Top Projects Hours" rowspan={3} />
